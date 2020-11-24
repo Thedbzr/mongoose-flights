@@ -6,3 +6,46 @@ body {
 a {
   color: #00B7FF;
 }
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+a {
+  color: #00B7FF;
+  font-size: 20px;
+}
+h1 {
+  text-align: center;
+}
+table {
+margin: 0 auto;
+border: 1px solid black;
+}
+tbody {
+  text-align: left;
+  border: 1px dotted black;
+}
+td {
+  border: 1px dotted black;
+  padding: 4vh;
+}
+form {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(auto, 22rem));
+}
+input [type="submit"]{
+  grid-column: span 2;
+  width: 12rem;
+  margin-left: auto;
+}
+.newFlight {
+  display: flex;
+  justify-content: center;
+}
+.details {
+ display: flex;
+ justify-content: center;
+}

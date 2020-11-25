@@ -36,11 +36,11 @@ const flightSchema = new Schema({
             return new Date().getFullYear() + 1;
         }
     },
-    destinations: {
-    type: [destinationSchema]
-    }
+    
+    destinations:[destinationSchema]
+    
 
-}, {
+}, { 
     timestamps: true
 });
 

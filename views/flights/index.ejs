@@ -26,12 +26,11 @@
                 <td><%= f.airline %></td>
                 <td><%= f.airport %></td>
                 <td><%= f.flightNo %></td>
-                <td><%= f.departs %><br><a class="details">Details</a></td>
+                <td><%= f.departs %><br><a href="/flights/<%= f._id %>" class="details">Details</a></td>
             </tr>
             <!-- Close the forEach using EJS here -->
             <% }); %>
         </tbody>
     </table>
-</body>
 
 <%- include('../partials/footer') %>

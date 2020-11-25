@@ -49,3 +49,18 @@ input [type="submit"]{
  display: flex;
  justify-content: center;
 }
+nav {
+  margin-bottom: 5vmin;
+}
+.header {
+  margin: 2vmin;
+}
+#destination{
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(1, minmax(auto, 22rem));
+}
+.newTicket {
+  display: flex;
+  justify-content: center;
+}

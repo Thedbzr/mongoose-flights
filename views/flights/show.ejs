@@ -20,14 +20,14 @@
                 <td><%= flight.departs %></td>
                 <td>
                     <% flight.destinations.forEach(function(d){ %>
-                            <div>
-                                 <%#db.flights.find({flight}).sort({arrival: -1}) %>
-                                <%= d.airport %>: <%= d.arrival%>
-                            </div>
-                   <%  }) %>
+                    <div>
+                        <%#db.flights.find({flight}).sort({arrival: -1}) %>
+                        <%= d.airport %>: <%= d.arrival%>
+                    </div>
+                    <%  }) %>
                 </td>
                 <td>
-                    
+
                     <form id="destination" action="/flights/<%= flight._id%>/destinations" method="POST">
                         <select name="airport">
                             <option value="DEN" selected>DEN</option>
@@ -47,15 +47,18 @@
     <table>
         <thead>
             <tr>
-                <th>Tickets</th>
+                <th>Seat</th>
+                <th>Price</th>
             </tr>
         </thead>
         <tbody>
+            <% tickets.forEach(function(ticket){ %>
             <tr>
-                <td>
-                    <a href="/flights/<%= flight._id%>/tickets/new">New Ticket</a>
-                </td>
+                <td><%= ticket.seat %></td>
+                <td><%= "$" + ticket.price %></td>
             </tr>
+            <% }) %>
         </tbody>
     </table>
+    <a href="/flights/<%= flight._id%>/tickets/new">New Ticket</a>
     <%- include('../partials/footer') %>
